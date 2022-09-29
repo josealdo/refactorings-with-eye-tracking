@@ -8,7 +8,11 @@ Keywords: extract method · eye tracking · code comprehension
 
 ## Experiment Material
 
-All programs, forms, reponse time, accuracy, and fixation data of all tasks are available <a href="https://github.com/josealdo/">here</a>.
+All the experiment material is available <a href="https://github.com/josealdo/refactorings-with-eye-tracking/tree/main/Experiment%20Material">here</a>.
+
+## Collected Data
+
+The dataset wth the collected data is available <a href="https://github.com/josealdo/refactorings-with-eye-tracking/tree/main/Collected%20Data">here</a>.
 
 ## Results
 
