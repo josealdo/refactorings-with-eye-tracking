@@ -1,4 +1,4 @@
-# Evaluating the Impact of the Extract and Inline Method: An Eye Tracking Experiment with Novices in J}ava
+# Evaluating the Impact of the Extract and Inline Method: An Eye Tracking Experiment with Novices in Java
 José Aldo Silva da Costa · Rohit Gheyi · Márcio Ribeiro · Rodrigo Bonifácio · Hyggo Almeida · Ana Carla Bibiano ·Alessandro Garcia
 
 ## Overview
