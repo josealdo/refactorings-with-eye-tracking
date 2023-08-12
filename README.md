@@ -14,6 +14,4 @@ All the experiment material is available <a href="https://github.com/josealdo/re
 
 The dataset wth the collected data is available <a href="https://github.com/josealdo/refactorings-with-eye-tracking/tree/main/Collected%20Data">here</a>.
 
-## Results
 
-All tables summarizing the results are available <a href="https://github.com/josealdo/">here</a>.
