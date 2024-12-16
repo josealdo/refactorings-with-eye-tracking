@@ -1,0 +1,229 @@
+# Warm-up program
+public class Main {
+        static int somaDoisNumeros(int num1, int num2) {
+                return num1 + num2;
+        }
+        public static void main(String[] args) {
+                int num1 = 10;
+                int num2 = 20;
+                int resultado = somaDoisNumeros(num1, num2);
+                System.out.println(resultado);
+        }
+}
+
+
+# Program 1 - Inlined
+public class Main {
+        public static void main(String[] args) {
+                int num = 3;
+                int resultado = (num * (num + 1)) / 2;
+                System.out.println(resultado);
+        }
+}
+
+# Program 1 - Extracted
+public class Main {
+        static int somaNumerosDeUmAteNum(int num) {
+                return (num * (num + 1)) / 2;
+        }
+        public static void main(String[] args) {
+                int num = 3;
+                int resultado = somaNumerosDeUmAteNum(num);
+                System.out.println(resultado);
+        }
+}
+
+# Program 2 - Inlined
+public class Main {
+        public static void main(String[] args) {
+                int num = 5;
+                num = num + 1;
+                for (int i = 2; i < num; i++) {
+                        if (num % i == 0) {
+                                num = num + 1;
+                                i = 2;
+                        } else {
+                                continue;
+                        }
+                }       
+                System.out.println(num);
+        }
+}
+
+# Program 2 - Extracted
+public class Main {
+        static int calculaProximoPrimo(int num) {
+                num = num + 1;
+                for (int i = 2; i < num; i++) {
+                        if (num % i == 0) {
+                                num = num + 1;
+                                i = 2;
+                        } else {
+                                continue;
+                        }
+                }
+                return num;
+        }
+        public static void main(String[] args) {
+                int num = 5;
+                System.out.println(calculaProximoPrimo(num));
+        } 
+}
+
+# Program 3 - Inlined
+public class Main {
+        public static void main(String[] args) {
+                int[] notas = {7,8,9};
+                int resultado = notas[0];
+                for (int i = 1; i < notas.length; i++) {          
+                        if (notas[i] > resultado) {
+                                resultado = notas[i];
+                        }
+                }
+                System.out.println(resultado);
+        }
+}
+
+# Program 3 - Extracted
+public class Main {
+        static int retornaMaiorNotaDaLista(int[] notas) {
+                int resultado = notas[0];
+                for (int i = 1; i < notas.length; i++) {          
+                        if (notas[i] > resultado) {
+                                resultado = notas[i];
+                        }
+                }
+                return resultado;
+        }
+        public static void main(String[] args) {
+                int[] notas = {7,8,9};
+                System.out.println(retornaMaiorNotaDaLista(notas));
+        }
+}
+
+# Program 4 - Inlined
+
+public class Main {    
+        public static void main(String[] args) { 
+                int num = 5; 
+                int resultado = 1;
+                for (int i = 2; i <= num; i++) {
+                        resultado = resultado * i;
+                }
+                System.out.println(resultado); 
+        } 
+}
+
+# Program 4 - Extracted
+public class Main { 
+        static int calculaFatorial(int num) { 
+                int resultado = 1; 
+                for (int i = 2; i <= num; i++) {
+                        resultado = resultado * i;
+                }
+                return resultado; 
+        }   
+        public static void main(String[] args) { 
+                int num = 5; 
+                System.out.println(calculaFatorial(num)); 
+        } 
+}
+
+# Program 5 - Inlined
+public class Main {    
+        public static void main(String[] args) { 
+                int[] numeros = {3,4,6}; 
+                int contador = 0;
+                for (int i = 0; i < numeros.length; i++) {
+                        if (numeros[i] % 3 == 0) {
+                                contador = contador + 1;                
+                        }
+                }
+                System.out.println(contador); 
+        } 
+}
+
+
+
+# Program 6 - Inlined
+public class Main {
+        public static void main(String[] args) {
+                int lado = 10;
+                int area = lado * lado;
+                System.out.println(area);
+        }
+}
+
+# Program 6 - Extracted
+public class Main {
+        static int calculaAreaDoQuadrado(int lado) {
+                return lado * lado; 
+        } 
+        public static void main (String[] args) { 
+                int lado = 10; 
+                int area = calculaAreaDoQuadrado(lado);     
+                System.out.println(area); 
+        }
+}
+
+
+# Program 7 - Inlined
+public class Main {
+        public static void main(String[] args) {
+                int num = 3; 
+                int contador = 0;
+                for (int i = 1; i <= num; i++) {
+                        if (i % 2 == 0) {
+                                contador = contador + 1;                
+                        }
+                }
+                System.out.println(contador); 
+        }
+}
+
+
+# Program 7 - Extracted
+public class Main {
+        static boolean checaSeEhPar(int numero) {
+                return numero % 2 == 0; 
+        } 
+        public static void main (String[] args) { 
+                int num = 3; 
+                int contador = 0;
+                for (int i = 1; i <= num; i++) {
+                        if (checaSeEhPar(i)) {
+                                contador = contador + 1;                
+                        }
+                }
+                System.out.println(contador);
+        }
+}
+
+# Program 8 - Inlined
+public class Main {
+        public static void main(String[] args) { 
+                int num = 345; 
+                int contador = 0; 
+                while (num != 0) { 
+                        num = num / 10; 
+                        contador = contador + 1; 
+                } 
+                System.out.print(contador); 
+        }
+}
+
+# Program 8 - Extracted
+public class Main {
+        static int contaNumeroDeDigitos(int num) { 
+                int contador = 0; 
+                while (num != 0) { 
+                        num = num / 10; 
+                        contador = contador + 1; 
+                } 
+                return contador; 
+        } 
+        public static void main(String[] args) { 
+                int num = 345; 
+                System.out.print(contaNumeroDeDigitos(num)); 
+        }
+}
